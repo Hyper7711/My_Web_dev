@@ -1,14 +1,32 @@
-// Get references to the button and message paragraph
-const button = document.getElementById('welcomeButton');
+// Get references to elements
+const toggleButton = document.getElementById('toggleMessageButton');
 const message = document.getElementById('message');
+const colorButton = document.getElementById('colorChangeButton');
 
-// Add a click event listener to the button
-button.addEventListener('click', function () {
-    // Toggle the 'hidden' class on the message element
-    if (message.classList.contains('hidden')) {
-        message.classList.remove('hidden'); // Show the message
-        message.textContent = "Hello! Thanks for visiting my web page."; // Optional: update message content
-    } else {
-        message.classList.add('hidden'); // Hide the message
-    }
+// Toggle message visibility and button text
+toggleButton.addEventListener('click', function() {
+  if (message.classList.contains('hidden')) {
+    message.classList.remove('hidden');
+    message.classList.add('show'); // Trigger fade-in effect
+    toggleButton.textContent = "Hide Message"; // Change button text
+  } else {
+    message.classList.remove('show');
+    message.classList.add('hidden');
+    toggleButton.textContent = "Show Message"; // Reset button text
+  }
+});
+
+// Function to generate a random color
+function getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+// Change background color on button click
+colorButton.addEventListener('click', function() {
+  document.body.style.backgroundColor = getRandomColor();
 });
