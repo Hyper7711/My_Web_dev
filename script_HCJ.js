@@ -5,6 +5,7 @@ const colorButton = document.getElementById('colorChangeButton');
 
 // Toggle message visibility and button text
 toggleButton.addEventListener('click', function() {
+  console.log("Toggle Button Clicked"); // Debugging statement
   if (message.classList.contains('hidden')) {
     message.classList.remove('hidden');
     message.classList.add('show'); // Trigger fade-in effect
@@ -23,10 +24,12 @@ function getRandomColor() {
   for (let i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * 16)];
   }
+  console.log("Generated Color:", color); // Debugging statement
   return color;
 }
 
 // Change background color on button click
 colorButton.addEventListener('click', function() {
+  console.log("Color Change Button Clicked"); // Debugging statement
   document.body.style.backgroundColor = getRandomColor();
 });
