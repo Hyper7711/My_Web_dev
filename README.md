@@ -1,5 +1,6 @@
-My_Web_dev
-My_Web_dev Beginner Web Development Projects - HTML, CSS & JavaScript Basics
+MY_Web_dev
+
+Beginner Web Development Projects - HTML, CSS & JavaScript Basics
 
 This repository showcases my journey into web development. It contains simple HTML, CSS, and JavaScript projects that I’ve created to learn the fundamentals of web design, layout, and basic interactivity. Check out my first web page, personal projects, and style experiments here as I grow in web development!
 
